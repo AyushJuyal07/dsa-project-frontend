@@ -1,0 +1,60 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* margin-top: 5rem;
+    padding: 2rem; */
+    height: 89.7vh;
+    padding-bottom: 6rem;
+
+}
+
+
+.text h1{
+    color: white;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+
+
+@media only screen and (max-width: 1024px){
+
+    .container{
+        height: 85vh;
+
+    }
+
+    .image {
+        display: none;
+    }
+
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text h1{
+        padding-left: 5rem;
+    }
+
+    .text button{
+        font-size: 1.5rem;
+        padding: 1.4rem 2.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 720px){
+    .text h1{
+        font-size: 4rem;
+    }
+}
+
+
+

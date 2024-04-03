@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+.con-tent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 2rem;
+  /* background-color: black; */
+}
+
+.con-tent nav{
+  position: absolute;
+  right: 10rem;
+}
+
+.con-tent h3 span{
+  color: #00DC82;
+  visibility: hidden;
+}
+
+.con-tent h3{
+  font-family: "DM Sans", sans-serif;
+  color: white;
+  margin: 2rem 2rem 2rem 4rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+  visibility: hidden;
+}
+
+nav a{
+  margin: 0 2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+
+}
+nav a:hover{
+  color: #0a0916;
+}
+
+.con-tent .nav-btn{
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+
+@media only screen and (max-width: 1024px){
+  .con-tent .nav-btn{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .con-tent h3{
+    margin: 1rem;
+  }
+
+  .con-tent nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #0a0916;
+    transition: 0.3s;
+    transform: translateY(-100vh);
+  }
+  
+  .con-tent .responsive_nav{
+    transform: none;
+  }
+
+  nav .nav-close-btn{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+  }
+
+  nav a{
+    font-size: 2rem;
+
+  }
+}
