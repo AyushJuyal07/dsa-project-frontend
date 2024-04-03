@@ -20,20 +20,20 @@ const Nav = () => {
         Healthyfi<span>Me</span>
       </h3>
       <nav ref={navRef}>
-        <a href="#" onClick={hideNavbar}>
+        <a href="/" onClick={hideNavbar}>
           Home
         </a>
-        <a href="#about" onClick={hideNavbar}>
-          About
+        <a href="/oncampus" onClick={hideNavbar}>
+          On Campus
         </a>
-        <a href="#experience" onClick={hideNavbar}>
-          Skills
+        <a href="/offcampus" onClick={hideNavbar}>
+          Off Campus
         </a>
-        <a href="#portfolio" onClick={hideNavbar}>
-          Projects
+        <a href="/resources" onClick={hideNavbar}>
+          Resources
         </a>
-        <a href="#contact" onClick={hideNavbar}>
-          Contact
+        <a href="/contact" onClick={hideNavbar}>
+          Contact Us
         </a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
