@@ -25,7 +25,7 @@ function Contact() {
         </div>
         <div className="col-xs-12">
           <div className="styled-input wide">
-            <input required />
+            <textarea required></textarea>
             <label>Message</label>
           </div>
         </div>

@@ -71,7 +71,9 @@ textarea:focus ~ span {
 
 textarea {
     width: 100%;
-    min-height: 15em;
+    height: 10em;
+    resize: none;
+
 }
 
 .input-container {
@@ -87,6 +89,10 @@ textarea {
 .sbt-button{
     max-width: fit-content;
     margin: 0 auto;
+}
+
+.message{
+    height: 6rem;
 }
 
 .submit-btn {
