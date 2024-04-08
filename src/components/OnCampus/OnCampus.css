@@ -1,7 +1,7 @@
 .oncampus{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* margin: 1rem; */
+    margin: 1rem;
 }
 
 .card{
@@ -9,12 +9,13 @@
     flex-direction: column;
     background-color: #6237A0;
     padding: 1rem 1rem 0.5rem 1rem;
-    margin: 1rem 2rem;
+    margin: 1.5rem 2rem;
     /* width: 30%; */
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .card:hover{
@@ -28,7 +29,7 @@
 }
 
 .card-img img{
-    width: 20rem;
+    width: 18rem;
     border-radius: 2rem;
 }
 

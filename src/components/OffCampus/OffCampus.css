@@ -1,3 +1,30 @@
 .offcampus{
-    height: 89.7vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
 }
+
+
+
+@media screen and (max-width: 1024px){
+    .offcampus{
+        grid-template-columns: 1fr 1fr;
+        margin: 3rem;
+
+    }
+
+}
+
+
+/* ==================== Media Queries (Small Devices) ========================*/
+
+
+@media screen and (max-width: 600px){
+    .offcampus{
+        grid-template-columns: 1fr;
+        margin: 0rem;
+    }
+
+
+}
+
