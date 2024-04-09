@@ -4,8 +4,6 @@
     margin: 1rem;
 }
 
-
-
 @media screen and (max-width: 1024px){
     .offcampus{
         grid-template-columns: 1fr 1fr;
