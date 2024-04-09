@@ -1,3 +1,52 @@
 .resources{
-    height: 89.7vh;
+    
+}
+
+.resource-card{
+    display: grid;
+    background-color: #6237A0;
+    margin: 2rem 16rem;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.title p{
+    font-size: 1.5rem;
+    opacity: 60%;
+    font-weight: 600;
+}
+
+.desc{
+    padding: 0 2rem 2rem 2rem;
+}
+
+.desc p{
+    text-align: justify;
+}
+
+
+@media screen and (max-width: 1024px){
+
+    .title{
+        flex-direction: column;
+    }
+
+    .resource-card{
+        margin: 2rem;
+    }
+
+
+}
+
+@media screen and (max-width: 600px){
+
+
 }
