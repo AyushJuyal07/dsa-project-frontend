@@ -36,10 +36,11 @@ nav a{
   color: white;
   text-decoration: none;
   font-size: 1.3rem;
-
+  font-weight: 700;
 }
 nav a:hover{
-  color: #0a0916;
+  transition:all 0.2s ease;
+  color: #1f1e25;
 }
 
 .con-tent .nav-btn{
@@ -55,7 +56,7 @@ nav a:hover{
 }
 
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1200px){
   .con-tent .nav-btn{
     visibility: visible;
     opacity: 1;
