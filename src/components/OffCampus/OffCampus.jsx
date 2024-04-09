@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./OffCampus.css";
 import img from "../../assets/images.png";
+import MoonLoader from "react-spinners/MoonLoader";
 
 import getAllNotifications from "../../api/getAllNotification";
 
@@ -24,7 +25,15 @@ function OffCampus() {
   }, []);
 
   return isLoaded == false ? (
-    ""
+    <div className="loading">
+      <MoonLoader
+        color={"#ffffff"}
+        loading={!isLoaded}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    </div>
   ) : (
     <div className="offcampus">
       {cards.map((card) => {

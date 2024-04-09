@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./OnCampus.css"
-import img from '../../assets/images.png'
+import "./OnCampus.css";
+import img from "../../assets/images.png";
+import MoonLoader from "react-spinners/MoonLoader";
+
 import getAllNotifications from "../../api/getAllNotification";
 
 function OnCampus() {
@@ -23,7 +25,15 @@ function OnCampus() {
   }, []);
 
   return isLoaded == false ? (
-    ""
+    <div className="loading">
+      <MoonLoader
+        color={"#ffffff"}
+        loading={!isLoaded}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    </div>
   ) : (
     <div className="oncampus">
       {cards.map((card) => {
@@ -43,4 +53,4 @@ function OnCampus() {
   );
 }
 
-export default OnCampus
+export default OnCampus;
