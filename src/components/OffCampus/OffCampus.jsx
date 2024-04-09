@@ -8,48 +8,48 @@ function OffCampus() {
       <div className='card'>
         <div className='card-img'><img src={img} alt="" /></div>
         <div className='card-text'> 
-          <h1>Course name</h1>
-          <button>Start</button>
+          <h1>Company name</h1>
+          <button>Apply</button>
         </div>
       </div>
 
       <div className='card'>
         <div className='card-img'><img src={img} alt="" /></div>
         <div className='card-text'> 
-          <h1>Course name</h1>
-          <button>Start</button>
+          <h1>Company name</h1>
+          <button>Apply</button>
         </div>
       </div>
 
       <div className='card'>
         <div className='card-img'><img src={img} alt="" /></div>
         <div className='card-text'> 
-          <h1>Course name</h1>
-          <button>Start</button>
+          <h1>Company name</h1>
+          <button>Apply</button>
         </div>
       </div>
 
       <div className='card'>
         <div className='card-img'><img src={img} alt="" /></div>
         <div className='card-text'> 
-          <h1>Course name</h1>
-          <button>Start</button>
+          <h1>Company name</h1>
+          <button>Apply</button>
         </div>
       </div>
 
       <div className='card'>
         <div className='card-img'><img src={img} alt="" /></div>
         <div className='card-text'> 
-          <h1>Course name</h1>
-          <button>Start</button>
+          <h1>Company name</h1>
+          <button>Apply</button>
         </div>
       </div>
 
       <div className='card'>
         <div className='card-img'><img src={img} alt="" /></div>
         <div className='card-text'> 
-          <h1>Course name</h1>
-          <button>Start</button>
+          <h1>Company name</h1>
+          <button>Apply</button>
         </div>
       </div>
     </div>
