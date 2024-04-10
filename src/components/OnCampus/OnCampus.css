@@ -4,6 +4,13 @@
     margin: 1rem;
 }
 
+.loading {
+    height: 96vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .card{
     display: flex;
     flex-direction: column;

@@ -9,9 +9,9 @@ const Home = () => {
     <div className='home'>
       <div className='container'>
         <div className='text'>
-          <p>Make your placements journey smooth. Discover top companies and conquer your coding challenges with curated DSA resources</p>
-          <br />
           <h1>AB SB PLACE HONGE!</h1>
+          <br />
+          <p>Make your placements journey smooth. Discover top companies and conquer your coding challenges with curated DSA resources</p>
         </div>
         <div className='image'>
           <img src={dev} alt="" />

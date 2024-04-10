@@ -8,6 +8,10 @@
     padding-bottom: 6rem;
 }
 
+.text {
+    width: 50%;
+}
+
 .text h1 {
     color: white;
     font-size: 5rem;
@@ -19,7 +23,7 @@
 .text p {
     color: white;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 600;
     margin-right: 2rem;
     margin-left: 2rem;
 }
