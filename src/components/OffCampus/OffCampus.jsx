@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./OffCampus.css";
 import img from "../../assets/images.png";
 import MoonLoader from "react-spinners/MoonLoader";
+import { motion } from "framer-motion";
 
 import getAllNotifications from "../../api/getAllNotification";
 
@@ -35,7 +36,12 @@ function OffCampus() {
       />
     </div>
   ) : (
-    <div className="offcampus">
+    <motion.div
+      transition={{duration: 1}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="offcampus"
+    >
       {cards.map((card) => {
         return (
           <div className="card">
@@ -49,7 +55,7 @@ function OffCampus() {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }
 

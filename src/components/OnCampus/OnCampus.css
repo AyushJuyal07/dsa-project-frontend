@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 1rem;
+    transition: opacity 0.5s, display 0.s;
 }
 
 .loading {

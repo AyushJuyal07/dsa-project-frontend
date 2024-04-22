@@ -1,84 +1,64 @@
-import React from 'react'
-import "./Resources.css"
+import React, { useState, useEffect } from "react";
+import "./Resources.css";
+import MoonLoader from "react-spinners/MoonLoader";
+import { motion } from "framer-motion";
+
+import getAllResources from "../../api/getAllResources";
 
 function Resources() {
-  return (
-    <div className='resources'>
-      <div className='resource-card'>
-        <div className='title'>
-          <h1>Mern stack problem</h1>
-          <p>title</p>
-        </div>
-        <div className='desc'>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, rem. Illum doloremque modi, voluptatibus doloribus eveniet dolores maxime sed ab quos quibusdam aspernatur corrupti cumque ipsam non! Et dolorum magni voluptatum, ipsam iure at necessitatibus neque inventore eveniet minima placeat dolores esse sequi. Qui vero eaque voluptate odio suscipit accusantium!</p>
-        </div>
-      </div>
+  const [cards, setCards] = useState();
+  const [isLoaded, setIsLoaded] = useState(false);
 
-      <div className='resource-card'>
-        <div className='title'>
-          <h1>Mern stack problem</h1>
-          <p>title</p>
-        </div>
-        <div className='desc'>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, rem. Illum doloremque modi, voluptatibus doloribus eveniet dolores maxime sed ab quos quibusdam aspernatur corrupti cumque ipsam non! Et dolorum magni voluptatum, ipsam iure at necessitatibus neque inventore eveniet minima placeat dolores esse sequi. Qui vero eaque voluptate odio suscipit accusantium!</p>
-        </div>
-      </div>
+  const fetchData = async () => {
+    try {
+      const data = await getAllResources();
+      setCards(data);
+      // console.log("*****" + data);
+      setIsLoaded(true);
+    } catch (error) {
+      console.log("There is an error");
+    }
+  };
 
-      <div className='resource-card'>
-        <div className='title'>
-          <h1>Mern stack problem</h1>
-          <p>title</p>
-        </div>
-        <div className='desc'>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, rem. Illum doloremque modi, voluptatibus doloribus eveniet dolores maxime sed ab quos quibusdam aspernatur corrupti cumque ipsam non! Et dolorum magni voluptatum, ipsam iure at necessitatibus neque inventore eveniet minima placeat dolores esse sequi. Qui vero eaque voluptate odio suscipit accusantium!</p>
-        </div>
-      </div>
-
-      <div className='resource-card'>
-        <div className='title'>
-          <h1>Mern stack problem</h1>
-          <p>title</p>
-        </div>
-        <div className='desc'>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, rem. Illum doloremque modi, voluptatibus doloribus eveniet dolores maxime sed ab quos quibusdam aspernatur corrupti cumque ipsam non! Et dolorum magni voluptatum, ipsam iure at necessitatibus neque inventore eveniet minima placeat dolores esse sequi. Qui vero eaque voluptate odio suscipit accusantium!</p>
-        </div>
-      </div>
-
-      <div className='resource-card'>
-        <div className='title'>
-          <h1>Mern stack problem</h1>
-          <p>title</p>
-        </div>
-        <div className='desc'>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, rem. Illum doloremque modi, voluptatibus doloribus eveniet dolores maxime sed ab quos quibusdam aspernatur corrupti cumque ipsam non! Et dolorum magni voluptatum, ipsam iure at necessitatibus neque inventore eveniet minima placeat dolores esse sequi. Qui vero eaque voluptate odio suscipit accusantium!</p>
-        </div>
-      </div>
-
-      <div className='resource-card'>
-        <div className='title'>
-          <h1>Mern stack problem</h1>
-          <p>title</p>
-        </div>
-        <div className='desc'>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, rem. Illum doloremque modi, voluptatibus doloribus eveniet dolores maxime sed ab quos quibusdam aspernatur corrupti cumque ipsam non! Et dolorum magni voluptatum, ipsam iure at necessitatibus neque inventore eveniet minima placeat dolores esse sequi. Qui vero eaque voluptate odio suscipit accusantium!</p>
-        </div>
-      </div>
-
-      <div className='resource-card'>
-        <div className='title'>
-          <h1>Mern stack problem</h1>
-          <p>title</p>
-        </div>
-        <div className='desc'>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, rem. Illum doloremque modi, voluptatibus doloribus eveniet dolores maxime sed ab </p>
-        </div>
-      </div>
+  useEffect(() => {
+    fetchData();
+  }, []);
 
 
-
-
+  return isLoaded == false ? (
+    <div className="loading">
+      <MoonLoader
+        color={"#ffffff"}
+        loading={!isLoaded}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
     </div>
-  )
+  ) : (
+    <motion.div
+      transition={{ duration: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="resources"
+    >
+      {cards.map((card) => {
+        return (
+          <a className="resource-card" href={card.link}>
+            <div className="title">
+              <h1>{card.title}</h1>
+              <p>Tags</p>
+            </div>
+            <div className="desc">
+              <p>
+                {card.description}
+              </p>
+            </div>
+          </a>
+        );
+      })}
+    </motion.div>
+  );
 }
 
-export default Resources
+export default Resources;

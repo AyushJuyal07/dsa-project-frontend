@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./OnCampus.css";
 import img from "../../assets/images.png";
 import MoonLoader from "react-spinners/MoonLoader";
+import { motion } from "framer-motion";
 
 import getAllNotifications from "../../api/getAllNotification";
 
@@ -13,7 +14,7 @@ function OnCampus() {
     try {
       const data = await getAllNotifications();
       setCards(data);
-      console.log(data);
+      // console.log(data);
       setIsLoaded(true);
     } catch (error) {
       console.log("There is an error");
@@ -35,7 +36,12 @@ function OnCampus() {
       />
     </div>
   ) : (
-    <div className="oncampus">
+    <motion.div
+      transition={{ duration: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="oncampus"
+    >
       {cards.map((card) => {
         return (
           <div className="card">
@@ -49,7 +55,7 @@ function OnCampus() {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }
 
